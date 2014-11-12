@@ -60,7 +60,7 @@ def modificar_producto(request):
 			return HttpResponse("producto modificada")
 	else:
 		fproducto=Producto_Form(instance=producto)
-	return render_to_response("blog/modificar_producto.html",{"fpregunta":fpregunta},RequestContext(request))
+	return render_to_response("blog/modificar_producto.html",{"fproducto":fproducto},RequestContext(request))
 #def modificar_producto(request):
 #	producto=Producto.objects.get(id=id)
 #	if request.method=="POST":
