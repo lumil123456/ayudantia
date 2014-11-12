@@ -1,0 +1,23 @@
+<style>
+	img { width: 100px; }
+</style>
+<header>
+	<nav>
+		<ul>
+			<li><a href="/">Inicio</a></li>
+			<li><a href="/usuarios">Productos</a></li>
+			<li><a href="/pedidos">Pedidos</a></li>
+		</ul>
+	</nav>	
+</header>
+<section>
+	<h1>Nuestros Productos</h1>
+	<ul>
+		{% for dato in datos %}
+		<li>
+			<a href="/producto/{{dato.id}}">{{dato.titulo}}</a><br>
+			<img src="{{MEDIA_URL}}{{dato.imagen}}" alt="">
+		</li>
+		{% ednfor %}
+	</ul>
+</section>
